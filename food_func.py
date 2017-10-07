@@ -86,45 +86,30 @@ def Food_Preference_Keyboard():
     )
     return tmp
 
+def Vegetarian_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = ' North Spine Canteen (V)')],
+    [KeyboardButton(text = ' South Spine Canteen (V)')],
+    [KeyboardButton(text = ' NIE Canteen (V)')],
+    ])
+    return tmp
 
-#any canteens without halal/veg? will have to remove
 
+#============= Halal Preference Keyboards ===============
 
 def Halal_Preference_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text = 'Canteen 1 (H)')],
-    [KeyboardButton(text = 'Canteen 2 (H)')],
-    [KeyboardButton(text = 'Canteen 4 (H)')],
-    [KeyboardButton(text = 'Canteen 9 (H)')],
-    [KeyboardButton(text = 'Canteen 11 (H)')],
-    [KeyboardButton(text = 'Canteen 13 (H)')],
-    [KeyboardButton(text = 'Canteen 14 (H)')],
-    [KeyboardButton(text = 'Canteen 16 (H)')],
-    [KeyboardButton(text = 'North Hill Canteen (H)')],
-    [KeyboardButton(text = 'North Spine Canteen (H)')],
-    [KeyboardButton(text = 'South Spine Canteen (H)')],
-    [KeyboardButton(text = 'NIE Canteen (H)')]
+    [KeyboardButton(text = ' Canteen 2 (H)')],
+    [KeyboardButton(text = ' Canteen 14 (H)')],
+    [KeyboardButton(text = ' Canteen 16 (H)')],
+    [KeyboardButton(text = ' North Hill Canteen (H)')],
+    [KeyboardButton(text = ' North Spine Canteen (H)')],
+    [KeyboardButton(text = ' South Spine Canteen (H)')],
+    [KeyboardButton(text = ' NIE Canteen (H)')],
     ])
     return tmp
 
-def Vegetarian_Preference_Keyboard():
-    tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text = 'Canteen 1 (V)')],
-    [KeyboardButton(text = 'Canteen 2 (V)')],
-    [KeyboardButton(text = 'Canteen 4 (V)')],
-    [KeyboardButton(text = 'Canteen 9 (V)')],
-    [KeyboardButton(text = 'Canteen 11 (V)')],
-    [KeyboardButton(text = 'Canteen 13 (V)')],
-    [KeyboardButton(text = 'Canteen 14 (V)')],
-    [KeyboardButton(text = 'Canteen 16 (V)')],
-    [KeyboardButton(text = 'North Hill Canteen (V)')],
-    [KeyboardButton(text = 'North Spine Canteen (V)')],
-    [KeyboardButton(text = 'South Spine Canteen (V)')],
-    [KeyboardButton(text = 'NIE Canteen (V)')]
-    ])
-    return tmp
-
-def Halal1_Preference_Keyboard():
+def Halal1_Preference_Keyboard(): ##Can remove
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text = 'Canteen 1 (H) Japanese')],
     [KeyboardButton(text = 'Canteen 1 (H) Chinese')],
@@ -135,6 +120,57 @@ def Halal1_Preference_Keyboard():
     ])
     return tmp
 
+def Halal2_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'Canteen 2 (H) Malay')],
+    ])
+    return tmp
+
+def Halal14_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'Canteen 14 (H) Malay')],
+    ])
+    return tmp
+
+def Halal16_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'Canteen 16 (H) Indian')],
+    ])
+    return tmp
+
+def HalalNH_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'North Hill Canteen (H) Chinese')],
+    [KeyboardButton(text = 'North Hill Canteen (H) Malay')],
+    [KeyboardButton(text = 'North Hill Canteen (H) Indian')],
+    ])
+    return tmp
+
+def HalalNS_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'North Spine Canteen (H) Chinese')],
+    [KeyboardButton(text = 'North Spine Canteen (H) Malay')],
+    [KeyboardButton(text = 'North Spine Canteen (H) Indian')],
+    ])
+    return tmp
+
+def HalalSS_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'South Spine Canteen (H) Chinese')],
+    [KeyboardButton(text = 'South Spine Canteen (H) Malay')],
+    [KeyboardButton(text = 'South Spine Canteen (H) Indian')],
+    ])
+    return tmp
+
+def HalalNIE_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'NIE Canteen (H) Chinese')],
+    [KeyboardButton(text = 'NIE Canteen (H) Western')],
+    [KeyboardButton(text = 'NIE Canteen (H) Malay')],
+    ])
+    return tmp
+
+#============= No Preference Keyboards ===============
 
 def No_Preference_Keyboard():
     tmp = InlineKeyboardMarkup(inline_keyboard = [
