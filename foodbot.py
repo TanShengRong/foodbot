@@ -3,7 +3,7 @@ import sys
 import telepot
 import math
 from telepot.loop import MessageLoop
-from food_func import Welcome_Keyboard, Halal_Preference_Keyboard, No_Preference_Keyboard, Vegetarian_Preference_Keyboard, Food_Preference_Keyboard, Nearest_Canteen
+from food_func import Welcome_Keyboard, Halal_Preference_Keyboard, Halal1_Preference_Keyboard, No_Preference_Keyboard, Vegetarian_Preference_Keyboard, Food_Preference_Keyboard, Nearest_Canteen
 
 #start message
 
@@ -14,19 +14,14 @@ def on_chat_message(msg):
         print(content_type, chat_type, chat_id)
 
         if content_type =='text':
+                #==================food preferences replies=======
                 if msg['text'] == 'Halal Preference':
                         #================== This means its a Halal reply ============
                         #==================
-                        # 1. Get all canteens nearby
-                        # 2. Reorder based on 1) Halal, and 2) distance
-                        # 3. Entire program should end here.
-                        
-
-
- 
+                        # 1. Choose canteen
+                        # 2. Food type
                         print("I prefer Halal lol")
                         bot.sendMessage(chat_id, 'Which canteen?', reply_markup = Halal_Preference_Keyboard())
-
 
                 elif msg['text'] == 'No Preference':
                         #================== No halal preference ============
@@ -40,11 +35,37 @@ def on_chat_message(msg):
                         print("I'm a fuckin Vegetarian")
                         bot.sendMessage(chat_id, 'Which canteen?', reply_markup = Vegetarian_Preference_Keyboard())
 
-                else :#user to give location / type food preference
+
+                #=================sub branching for food preference ...======
+                elif '(H)' in msg['text'] :
+                        #================= canteen preferences.....==========
+                        if '1' in msg['text']:
+                                #================= if type of food has been determined... =======
+                                if 'Japanese' in msg['text']:
+                                        print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
+                                        bot.sendMessage(chat_id, 'LET THEM HAVE THE JAP FOOD BOIS')
+                                        sys.exit()
+                                if 'Chinese' in msg['text']:
+                                        print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
+                                if 'Western' in msg['text']:
+                                        print('GIMME THE Western FOOD REVIEW OH MY GOD')
+                                if 'Malay' in msg['text']:
+                                        print('GIMME THE Malay FOOD REVIEW OH MY GOD')
+                                if 'Indian' in msg['text']:
+                                        print('GIMME THE Indian FOOD REVIEW OH MY GOD')
+                                if 'Vietnamese' in msg['text']:
+                                        print('GIMME THE Vietnamese FOOD REVIEW OH MY GOD')
+                                #================= if type of food not determined ===============
+                                else:                                         
+                                        bot.sendMessage(chat_id, 'What food type?', reply_markup = Halal1_Preference_Keyboard())
+                #================== same as above=====================
+                elif '(V)' in msg['text'] :
+                        print('vegen foods')
+                #================== welcome message====================
+                else :
                         bot.sendMessage(chat_id, 'Welcome to NTU Food Bot, \nWhat can I do for you?', reply_markup = Welcome_Keyboard())
-        #=============== REQUEST FOR LOCATION ========================
+        #=============== determine nearest canteen and let user decide ======
         elif content_type == 'location':
-                #================= Do location stuff here. Nearest dist can use Pythagoreas ===============
                 print("Do location stuff here")
 
                 n = Nearest_Canteen(msg['location']['latitude'],msg['location']['longitude'])
@@ -52,7 +73,6 @@ def on_chat_message(msg):
                 
                 bot.sendMessage(chat_id, 'The nearest is '+canfood[n]+', do keep that in mind.\nChoose your food preference', reply_markup = Food_Preference_Keyboard())
                 
-                #bot.sendMessage(chat_id, 'The nearest canteen is ', canteenfood[n], 'Please select your food preference', reply_markup = Food_Preference_Keyboard())
 
 #============================== IF ALL GOES CALL BACK QUERY THIS SHOULD NOT BE RUNNED =======================
 def on_callback_query(msg):
@@ -63,6 +83,9 @@ def on_callback_query(msg):
 
         if data =='hl':
                 print('yes! halal - looking up the database....')
+                bot.sendMessage(from_id, 'No Preference')#, reply_markup = No_Preference_Keyboard())
+                #bot.answerCallbackQuery(query_id, 'Whpls let this inline kb work', reply_markup = No_Preference_Keyboard())
+                
         if data =='nil':
                 print('yes! no pref - looking up the database....')
         if data =='veg':

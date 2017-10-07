@@ -68,6 +68,9 @@ def Nearest_Canteen(x,y):
 def Welcome_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text='Get_Location', request_location=True)],
+    [KeyboardButton(text = 'Halal Preference')],
+    [KeyboardButton(text = 'Vegetarian')],
+    [KeyboardButton(text = 'No Preference')]
     ],
     one_time_keyboard=True
     )
@@ -88,21 +91,50 @@ def Food_Preference_Keyboard():
 
 
 def Halal_Preference_Keyboard():
-    tmp = InlineKeyboardMarkup(inline_keyboard = [
-    [InlineKeyboardButton(text = 'Canteen 1', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'Canteen 2', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'Canteen 4', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'Canteen 9', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'Canteen 11', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'Canteen 13', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'Canteen 14', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'Canteen 16', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'North Hill Canteen', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'North Spine Canteen', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'South Spine Canteen', callback_data = 'hl')],
-    [InlineKeyboardButton(text = 'NIE Canteen', callback_data = 'hl')]
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'Canteen 1 (H)')],
+    [KeyboardButton(text = 'Canteen 2 (H)')],
+    [KeyboardButton(text = 'Canteen 4 (H)')],
+    [KeyboardButton(text = 'Canteen 9 (H)')],
+    [KeyboardButton(text = 'Canteen 11 (H)')],
+    [KeyboardButton(text = 'Canteen 13 (H)')],
+    [KeyboardButton(text = 'Canteen 14 (H)')],
+    [KeyboardButton(text = 'Canteen 16 (H)')],
+    [KeyboardButton(text = 'North Hill Canteen (H)')],
+    [KeyboardButton(text = 'North Spine Canteen (H)')],
+    [KeyboardButton(text = 'South Spine Canteen (H)')],
+    [KeyboardButton(text = 'NIE Canteen (H)')]
     ])
     return tmp
+
+def Vegetarian_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'Canteen 1 (V)')],
+    [KeyboardButton(text = 'Canteen 2 (V)')],
+    [KeyboardButton(text = 'Canteen 4 (V)')],
+    [KeyboardButton(text = 'Canteen 9 (V)')],
+    [KeyboardButton(text = 'Canteen 11 (V)')],
+    [KeyboardButton(text = 'Canteen 13 (V)')],
+    [KeyboardButton(text = 'Canteen 14 (V)')],
+    [KeyboardButton(text = 'Canteen 16 (V)')],
+    [KeyboardButton(text = 'North Hill Canteen (V)')],
+    [KeyboardButton(text = 'North Spine Canteen (V)')],
+    [KeyboardButton(text = 'South Spine Canteen (V)')],
+    [KeyboardButton(text = 'NIE Canteen (V)')]
+    ])
+    return tmp
+
+def Halal1_Preference_Keyboard():
+    tmp = ReplyKeyboardMarkup(keyboard = [
+    [KeyboardButton(text = 'Canteen 1 (H) Japanese')],
+    [KeyboardButton(text = 'Canteen 1 (H) Chinese')],
+    [KeyboardButton(text = 'Canteen 1 (H) Western')],
+    [KeyboardButton(text = 'Canteen 1 (H) Malay')],
+    [KeyboardButton(text = 'Canteen 1 (H) Indian')],
+    [KeyboardButton(text = 'Canteen 1 (H) Vietnamese')]
+    ])
+    return tmp
+
 
 def No_Preference_Keyboard():
     tmp = InlineKeyboardMarkup(inline_keyboard = [
@@ -121,19 +153,3 @@ def No_Preference_Keyboard():
     ])
     return tmp
 
-def Vegetarian_Preference_Keyboard():
-    tmp = InlineKeyboardMarkup(inline_keyboard = [
-    [InlineKeyboardButton(text = 'Canteen 1', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'Canteen 2', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'Canteen 4', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'Canteen 9', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'Canteen 11', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'Canteen 13', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'Canteen 14', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'Canteen 16', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'North Hill Canteen', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'North Spine Canteen', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'South Spine Canteen', callback_data = 'veg')],
-    [InlineKeyboardButton(text = 'NIE Canteen', callback_data = 'veg')]
-    ])
-    return tmp
