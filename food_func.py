@@ -95,7 +95,9 @@ def Vegetarian_Preference_Keyboard():
     [KeyboardButton(text = ' North Spine Canteen (V)')],
     [KeyboardButton(text = ' South Spine Canteen (V)')],
     [KeyboardButton(text = ' NIE Canteen (V)')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 
@@ -110,7 +112,9 @@ def Halal_Preference_Keyboard():
     [KeyboardButton(text = ' North Spine Canteen (H)')],
     [KeyboardButton(text = ' South Spine Canteen (H)')],
     [KeyboardButton(text = ' NIE Canteen (H)')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def Halal1_Preference_Keyboard(): ##Can remove
@@ -121,25 +125,33 @@ def Halal1_Preference_Keyboard(): ##Can remove
     [KeyboardButton(text = 'Canteen 1 (H) Malay')],
     [KeyboardButton(text = 'Canteen 1 (H) Indian')],
     [KeyboardButton(text = 'Canteen 1 (H) Vietnamese')]
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def Halal2_Preference_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text = 'Canteen 2 (H) Malay')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def Halal14_Preference_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text = 'Canteen 14 (H) Malay')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def Halal16_Preference_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text = 'Canteen 16 (H) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def HalalNH_Preference_Keyboard():
@@ -147,7 +159,9 @@ def HalalNH_Preference_Keyboard():
     [KeyboardButton(text = 'North Hill Canteen (H) Chinese')],
     [KeyboardButton(text = 'North Hill Canteen (H) Malay')],
     [KeyboardButton(text = 'North Hill Canteen (H) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def HalalNS_Preference_Keyboard():
@@ -155,7 +169,9 @@ def HalalNS_Preference_Keyboard():
     [KeyboardButton(text = 'North Spine Canteen (H) Chinese')],
     [KeyboardButton(text = 'North Spine Canteen (H) Malay')],
     [KeyboardButton(text = 'North Spine Canteen (H) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def HalalSS_Preference_Keyboard():
@@ -163,7 +179,9 @@ def HalalSS_Preference_Keyboard():
     [KeyboardButton(text = 'South Spine Canteen (H) Chinese')],
     [KeyboardButton(text = 'South Spine Canteen (H) Malay')],
     [KeyboardButton(text = 'South Spine Canteen (H) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def HalalNIE_Preference_Keyboard():
@@ -171,7 +189,9 @@ def HalalNIE_Preference_Keyboard():
     [KeyboardButton(text = 'NIE Canteen (H) Chinese')],
     [KeyboardButton(text = 'NIE Canteen (H) Western')],
     [KeyboardButton(text = 'NIE Canteen (H) Malay')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 #============= No Preference Keyboards ===============
@@ -190,7 +210,9 @@ def No_Preference_Keyboard():
     [KeyboardButton(text = 'North Spine Canteen (N)')],
     [KeyboardButton(text = 'South Spine Canteen (N)')],
     [KeyboardButton(text = 'NIE Canteen (N)')]
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No1_Preference_Keyboard():
@@ -198,7 +220,9 @@ def No1_Preference_Keyboard():
     [KeyboardButton(text = 'Canteen 1 (N) Japanese')],
     [KeyboardButton(text = 'Canteen 1 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 1 (N) Western')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No2_Preference_Keyboard():
@@ -207,13 +231,17 @@ def No2_Preference_Keyboard():
     [KeyboardButton(text = 'Canteen 2 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 2 (N) Western')],
     [KeyboardButton(text = 'Canteen 2 (N) Malay')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No4_Preference_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text = 'Canteen 4 (N) Chinese')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No9_Preference_Keyboard():
@@ -221,7 +249,9 @@ def No9_Preference_Keyboard():
     [KeyboardButton(text = 'Canteen 9 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 9 (N) Western')],
     [KeyboardButton(text = 'Canteen 9 (N) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No11_Preference_Keyboard():
@@ -231,7 +261,9 @@ def No11_Preference_Keyboard():
     [KeyboardButton(text = 'Canteen 11 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 11 (N) Western')],
     [KeyboardButton(text = 'Canteen 11 (N) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No13_Preference_Keyboard():
@@ -240,14 +272,18 @@ def No13_Preference_Keyboard():
     [KeyboardButton(text = 'Canteen 13 (N) Japanese')],
     [KeyboardButton(text = 'Canteen 13 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 13 (N) Western')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No14_Preference_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text = 'Canteen 14 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 14 (N) Malay')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def No16_Preference_Keyboard():
@@ -255,7 +291,9 @@ def No16_Preference_Keyboard():
     [KeyboardButton(text = 'Canteen 16 (N) Japanese')],
     [KeyboardButton(text = 'Canteen 16 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 16 (N) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def NoNH_Preference_Keyboard():
@@ -264,7 +302,9 @@ def NoNH_Preference_Keyboard():
     [KeyboardButton(text = 'North Hill Canteen (N) Western')],
     [KeyboardButton(text = 'North Hill Canteen (N) Malay')],
     [KeyboardButton(text = 'North Hill Canteen (N) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def NoNS_Preference_Keyboard():
@@ -276,7 +316,9 @@ def NoNS_Preference_Keyboard():
     [KeyboardButton(text = 'North Spine Canteen (N) Malay')],
     [KeyboardButton(text = 'North Spine Canteen (N) Indian')],
     [KeyboardButton(text = 'North Spine Canteen (N) Vietnamese')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def NoSS_Preference_Keyboard():
@@ -286,7 +328,9 @@ def NoSS_Preference_Keyboard():
     [KeyboardButton(text = 'South Spine Canteen (N) Western')],
     [KeyboardButton(text = 'South Spine Canteen (N) Malay')],
     [KeyboardButton(text = 'South Spine Canteen (N) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
 
 def NoNIE_Preference_Keyboard():
@@ -295,5 +339,7 @@ def NoNIE_Preference_Keyboard():
     [KeyboardButton(text = 'NIE Canteen (N) Western')],
     [KeyboardButton(text = 'NIE Canteen (N) Malay')],
     [KeyboardButton(text = 'NIE Canteen (N) Indian')],
-    ])
+    ],
+    one_time_keyboard=True
+    )
     return tmp
