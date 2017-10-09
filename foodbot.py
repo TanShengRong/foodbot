@@ -52,7 +52,7 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = Halal2_Preference_Keyboard())
 
-                        if 'Canteen 14' in msg['text']:
+                        elif 'Canteen 14' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
@@ -61,7 +61,7 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = Halal14_Preference_Keyboard())
 
-                        if 'Canteen 16' in msg['text']:
+                        elif 'Canteen 16' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
@@ -71,17 +71,17 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = Halal16_Preference_Keyboard())
 
-                        if 'North Hill Canteen' in msg['text']:
+                        elif 'North Hill Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nChicken Rice ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang And Indian Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang And Indian Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -89,17 +89,17 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = HalalNH_Preference_Keyboard())
 
-                        if 'North Spine Canteen' in msg['text']:
+                        elif 'North Spine Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nVegetarian Food ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMalay BBQ ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Cuisine ⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -107,17 +107,17 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = HalalNS_Preference_Keyboard())
 
-                        if 'South Spine Canteen' in msg['text']:
+                        elif 'South Spine Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nBan Mian Fish Soup ⭐⭐⭐⭐\nYong Tau Foo ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -125,24 +125,28 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = HalalSS_Preference_Keyboard())
 
-                        if 'NIE Canteen' in msg['text']:
+                        elif 'NIE Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nVegetarian ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nWestern Food ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang ⭐⭐\nMuslim Food ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
                                 #================= if type of food not determined ===============
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = HalalNIE_Preference_Keyboard())
-
+                                                                                               
+			#================== if canteen preference not determined ==================
+                        else:
+                                print("I'm halal")
+                                bot.sendMessage(chat_id, 'Which canteen?', reply_markup = Halal_Preference_Keyboard())
 
                 #================== same as above=====================
                 elif '(V)' in msg['text'] :
@@ -174,10 +178,10 @@ def on_chat_message(msg):
                                         print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMenya Takashi ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Chinese' in msg['text']:
+                                elif 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMala Talk ⭐⭐⭐\nHandmade Noodle ⭐⭐\nBraised Rice And Noodle ⭐⭐⭐\nChinese Cuisine ⭐⭐⭐⭐\nEconomical Rice ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nWestern Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -185,21 +189,21 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No1_Preference_Keyboard())
 
-                        if 'Canteen 2' in msg['text']:
+                        elif 'Canteen 2' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Korean' in msg['text']:
                                         print('GIMME THE Korean FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nKorean Cuisine ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Chinese' in msg['text']:
+                                elif 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nChicken Rice ⭐⭐⭐\nXiao Long Bao ⭐⭐⭐⭐\nYong Tau Foo ⭐⭐\nSichuan Cuisine ⭐⭐⭐⭐\nShandong Big Bao ⭐⭐\nEconomical Rice ⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nKath’s Bakery ⭐⭐⭐\nThe Oven ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nAyam Penyet ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -207,7 +211,7 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No2_Preference_Keyboard())
 
-                        if 'Canteen 4' in msg['text']:
+                        elif 'Canteen 4' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
@@ -217,17 +221,17 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No4_Preference_Keyboard())
 
-                        if 'Canteen 9' in msg['text']:
+                        elif 'Canteen 9' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nJiu Li Xiang Chuan Cai ⭐\nChinese Cuisine ⭐⭐⭐⭐⭐\nXian Noodles ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nWestern ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -235,25 +239,25 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No9_Preference_Keyboard())
 
-                        if 'Canteen 11' in msg['text']:
+                        elif 'Canteen 11' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Korean' in msg['text']:
                                         print('GIMME THE Korean FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nKorean Food ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Japanese' in msg['text']:
+                                elif 'Japanese' in msg['text']:
                                         print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \n7 Fukijin Japanese Food ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Chinese' in msg['text']:
+                                elif 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMixed Veg Rice ⭐\nSi Chuan Mei Shi ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nWaffles & Pastries ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Food ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -261,21 +265,21 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No11_Preference_Keyboard())
 
-                        if 'Canteen 13' in msg['text']:
+                        elif 'Canteen 13' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Korean' in msg['text']:
                                         print('GIMME THE Korean FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nKorean Cuisine ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Japanese' in msg['text']:
+                                elif 'Japanese' in msg['text']:
                                         print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nJapanese Cuisine ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Chinese' in msg['text']:
+                                elif 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNoodle Delight ⭐⭐⭐⭐\nChinese Cuisine ⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nWestern Food ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -283,13 +287,13 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No13_Preference_Keyboard())
 
-                        if 'Canteen 14' in msg['text']:
+                        elif 'Canteen 14' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nTaiwan ⭐⭐⭐\nSi Chuan ⭐⭐\nAsian Food Delights ⭐⭐\nBan Mian-Fish Soup ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMuslim Malay ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -297,17 +301,17 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No14_Preference_Keyboard())
 
-                        if 'Canteen 16' in msg['text']:
+                        elif 'Canteen 16' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Japanese' in msg['text']:
                                         print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nJapanese Food ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Chinese' in msg['text']:
+                                elif 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nChinese Ramen ⭐⭐⭐\nSignature Dishes With Rice ⭐⭐\nMala Hot Pot ⭐⭐\nEconomical Rice ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Food ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -315,20 +319,20 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No16_Preference_Keyboard())
 
-                        if 'North Hill Canteen' in msg['text']:
+                        elif 'North Hill Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMixed Veg Rice ⭐⭐⭐\nTraditional Dough Fritters And Miniwok ⭐⭐⭐\nTraditional Handmade Fish Ball Noodle ⭐⭐⭐\nChicken Rice ⭐⭐\nAh Boon’s Fish Soup ⭐⭐⭐\nClaypot & Porridge ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nWestern Cuisine ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang And Indian Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang And Indian Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -336,33 +340,33 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = NoNH_Preference_Keyboard())
 
-                        if 'North Spine Canteen' in msg['text']:
+                        elif 'North Spine Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Korean' in msg['text']:
                                         print('GIMME THE Korean FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nJapanese Korean Delight ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Japanese' in msg['text']:
+                                elif 'Japanese' in msg['text']:
                                         print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nJapanese Korean Delight ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Chinese' in msg['text']:
+                                elif 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMini Wok ⭐⭐⭐\nYong Tau Foo ⭐⭐⭐⭐\nChicken Rice ⭐⭐⭐\nHand-Made Noodles ⭐⭐⭐\nMixed Rice ⭐⭐\nCantonese Roast Duck ⭐⭐⭐⭐\nSoup Delight ⭐⭐⭐⭐⭐\nVegetarian Food ⭐⭐\nTaiwanese Cuisine ⭐⭐⭐⭐\nXian Cuisine ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
         
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nWestern Food ⭐⭐⭐\nBBQ Delight ⭐⭐\nItalian Pasta ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nMalay BBQ ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Cuisine ⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Vietnamese' in msg['text']:
+                                elif 'Vietnamese' in msg['text']:
                                         print('GIMME THE Vietnamese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nVietnamese Cuisine ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -370,25 +374,25 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = NoNS_Preference_Keyboard())
 
-                        if 'South Spine Canteen' in msg['text']:
+                        elif 'South Spine Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Japanese' in msg['text']:
                                         print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nJapanese Cuisine ⭐⭐⭐\nSalad And Bento Express ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Chinese' in msg['text']:
+                                elif 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nVegetarian ⭐⭐⭐⭐⭐\nMixed Veg Rice ⭐⭐⭐⭐\nDim Sum ⭐⭐⭐\nChinese Cuisine ⭐⭐⭐⭐\nBan Mian Fish Soup ⭐⭐⭐⭐\nYong Tau Foo ⭐⭐⭐\nChicken Rice ⭐⭐⭐\nKoka Mee Express ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nPasta Express ⭐⭐⭐⭐\nSalad And Bento Express ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
@@ -396,26 +400,26 @@ def on_chat_message(msg):
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = NoSS_Preference_Keyboard())
 
-                        if 'NIE Canteen' in msg['text']:
+                        elif 'NIE Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
                                         print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nVegetarian ⭐⭐⭐⭐\nChicken Rice ⭐⭐⭐⭐⭐\nBan Mian & Fish Soup ⭐⭐⭐\nNoodle ⭐⭐⭐⭐\nA-La-Carte ⭐⭐\nChinese Food ⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Western' in msg['text']:
+                                elif 'Western' in msg['text']:
                                         print('GIMME THE Western FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nSandwiches & Salad Bar ⭐⭐⭐⭐⭐\nWestern Food ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
 
-                                if 'Malay' in msg['text']:
+                                elif 'Malay' in msg['text']:
                                         print('GIMME THE Malay FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nNasi Padang ⭐⭐\nMuslim Food ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
-                                if 'Indian' in msg['text']:
+                                elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
                                                                                                         
                                         #================= if type of food not determined ===============
-                        else:
+                                else:
                                         bot.sendMessage(chat_id, 'What type of food would you like to eat?', reply_markup = NoNIE_Preference_Keyboard())
                                         
 
@@ -429,10 +433,13 @@ def on_chat_message(msg):
                 x = msg['location']['latitude']
                 y = msg['location']['longitude']
                 origins = [[x,y]]
-                destinations = ['ntu canteen 1', 'ntu food court 2', 'ntu canteen 4', 'ntu canteen 9', 'ntu canteen 11', 'ntu food court 13', '34 Nanyang Cres, Singapore 637634', '50 Nanyang Walk, Singapore 637658', '636959, 64 Nanyang Cres', 'ntu food court north spine', 'ntu koufu south spine', 'ntu nie canteen']
+                print(origins) # print current loc for checking
+ #              canfood=['canteen 1',                    'canteen 2',                'canteen 4',              'canteen 9',       'canteen 11',              'canteen 13',         'canteen 14',           'canteen 16',          'north hill canteen', 'north spine canteen', 'south spine canteen',      'nie canteen']
+                destinations = [[1.346628,103.686028], [1.348363, 103.685482],[1.344189, 103.685439], [1.352270, 103.685298], [1.354908, 103.686477], [1.351721, 103.681082], [1.352692, 103.682108], [1.350299, 103.680914], [1.354395, 103.688173], [1.347029, 103.680254], [1.342459, 103.682427], [1.348746, 103.677614]]
                 n = Nearest_Canteen(x,y)
-                print(n)
+                print (n) #know what to draw from string
                 listz = (GetAllDistance_Canteen(origins,destinations))
+                print (listz) # print whole list for checking 
                 distance_timetowalk=listz[n]
                 print(distance_timetowalk[0])
                 bot.sendMessage(chat_id, 'The nearest food location is '+canfood[n]+'.\nIt is approximately '+distance_timetowalk[0]+' away\nWhich is about '+distance_timetowalk[1]+' if you walk. \nPlease choose your food preference', reply_markup = Food_Preference_Keyboard())
