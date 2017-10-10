@@ -43,7 +43,7 @@ Leonard,,,
 * STACKOVERFLOW for everything that was not yet taught 
 
 
-##TODOS 
+## TODOS 
 
 Documentation
 
@@ -68,13 +68,13 @@ Have a readme.txt file to list down all the Python files as part of your project
 
 
 
-##Future TODOS.
+## Future TODOS.
 
 1. Setup, link database of reviews - user input
                                    - yelp
 
 
-##Limitations
+## Limitations
 
 restaurants not included
 reviews provided not based on a huge standard deviation
