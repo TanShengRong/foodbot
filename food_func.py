@@ -70,7 +70,7 @@ def Nearest_Canteen(x,y):
 # function reutrn: selected service
 def Welcome_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text='Get_Location', request_location=True)],
+    [KeyboardButton(text = 'Find Nearest Canteen', request_location=True)],
     [KeyboardButton(text = 'Halal Preference')],
     [KeyboardButton(text = 'Vegetarian Preference')],
     [KeyboardButton(text = 'No Preference')]
