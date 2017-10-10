@@ -1,3 +1,48 @@
+# Ntu Food Bot
+
+NTU Food Bot gives the location and distance from the best Makan places in the vicinity 😄
+
+## Getting Started
+
+The bot requires Telegram versions released after 9 April, 2016. Telegram Web and Desktop is not recommended as location grabbing is not supported.
+
+### How to use ? 
+
+
+```
+1. User provide current location - bot determines nearest canteen
+
+2. Preferred canteen is selected regardless of the previous result 
+
+3. Food preference is asked 
+
+4. Preferred food type will be chosen 
+
+5. Our reviews will be presented!! 
+
+5. Return to beginning
+
+```
+
+
+
+## Built With
+
+* [telepot](https://github.com/nickoala/telepot) - py module that simplifies telegram bot coding 
+* [Google Maps Distance Matrix](https://developers.google.com/maps/documentation/distance-matrix/) - api to determine distance and time
+
+## Contributing
+
+XIN QING
+IAN LIEW
+Leonard,,,
+
+## Acknowledgments
+
+* GITHUB
+* STACKOVERFLOW for everything that was not yet taught 
+
+
 #TODOS 
 
 Documentation
@@ -23,25 +68,11 @@ Have a readme.txt file to list down all the Python files as part of your project
 
 
 
-
 #Future TODOS.
 
 1. Setup, link database of reviews - user input
                                    - yelp
 
-
-
-
-#FUNCTIONS
-
-
-1. Determine nearest canteens
-
-2. Check for food preferences
-
-3. Ask for preferred food type
-
-3. Introduce food stalls based on our reviews
 
 #Limitations
 
