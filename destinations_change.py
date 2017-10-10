@@ -1,0 +1,3 @@
+destinations = ['ntu canteen 1', 'ntu food court 2', 'ntu canteen 4', 'ntu canteen 9', 'ntu canteen 11', 'ntu food court 13', '34 Nanyang Cres, Singapore 637634', '50 Nanyang Walk, Singapore 637658', '636959, 64 Nanyang Cres', 'ntu food court north spine', 'ntu koufu south spine', 'ntu nie canteen']
+canfood=['canteen 1','canteen 2','canteen 4','canteen 9','canteen 11','canteen 13','canteen 14','canteen 16','north hill canteen','north spine canteen','south spine canteen','nie canteen']
+destination = [[1.346736,103.686092],[1.348329,103.685547],[1.344169,103.685429],[1.352216,103.685265],[1.354903,103.686477],[1.351722,103.681100],[1.352648,103.682108],[1.350299,103.680917],[1.352648,103.682108],[1.354395,103.680253],[1.342459,103.682426],[1.348750,103.677611]]
