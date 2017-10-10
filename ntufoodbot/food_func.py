@@ -120,43 +120,6 @@ def Halal_Preference_Keyboard():
     )
     return tmp
 
-def Halal1_Preference_Keyboard(): ##Can remove
-    tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text = 'Canteen 1 (H) Japanese')],
-    [KeyboardButton(text = 'Canteen 1 (H) Chinese')],
-    [KeyboardButton(text = 'Canteen 1 (H) Western')],
-    [KeyboardButton(text = 'Canteen 1 (H) Malay')],
-    [KeyboardButton(text = 'Canteen 1 (H) Indian')],
-    [KeyboardButton(text = 'Canteen 1 (H) Vietnamese')]
-    ],
-    one_time_keyboard=True
-    )
-    return tmp
-
-def Halal2_Preference_Keyboard():
-    tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text = 'Canteen 2 (H) Malay')],
-    ],
-    one_time_keyboard=True
-    )
-    return tmp
-
-def Halal14_Preference_Keyboard():
-    tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text = 'Canteen 14 (H) Malay')],
-    ],
-    one_time_keyboard=True
-    )
-    return tmp
-
-def Halal16_Preference_Keyboard():
-    tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text = 'Canteen 16 (H) Indian')],
-    ],
-    one_time_keyboard=True
-    )
-    return tmp
-
 def HalalNH_Preference_Keyboard():
     tmp = ReplyKeyboardMarkup(keyboard = [
     [KeyboardButton(text = 'North Hill Canteen (H) Chinese')],
@@ -234,14 +197,6 @@ def No2_Preference_Keyboard():
     [KeyboardButton(text = 'Canteen 2 (N) Chinese')],
     [KeyboardButton(text = 'Canteen 2 (N) Western')],
     [KeyboardButton(text = 'Canteen 2 (N) Malay')],
-    ],
-    one_time_keyboard=True
-    )
-    return tmp
-
-def No4_Preference_Keyboard():
-    tmp = ReplyKeyboardMarkup(keyboard = [
-    [KeyboardButton(text = 'Canteen 4 (N) Chinese')],
     ],
     one_time_keyboard=True
     )

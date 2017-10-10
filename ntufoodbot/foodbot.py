@@ -4,7 +4,7 @@ import googlemaps
 import time
 import math
 from telepot.loop import MessageLoop
-from food_func import Welcome_Keyboard, Halal_Preference_Keyboard, Halal2_Preference_Keyboard, Halal14_Preference_Keyboard, Halal16_Preference_Keyboard, HalalNS_Preference_Keyboard, HalalSS_Preference_Keyboard, HalalNH_Preference_Keyboard, HalalNIE_Preference_Keyboard, No_Preference_Keyboard, No1_Preference_Keyboard, No2_Preference_Keyboard, No4_Preference_Keyboard, No9_Preference_Keyboard, No11_Preference_Keyboard, No13_Preference_Keyboard, No14_Preference_Keyboard, No16_Preference_Keyboard, NoNH_Preference_Keyboard, NoNS_Preference_Keyboard, NoSS_Preference_Keyboard, NoNIE_Preference_Keyboard, Vegetarian_Preference_Keyboard, Food_Preference_Keyboard, Nearest_Canteen
+from food_func import Welcome_Keyboard, Halal_Preference_Keyboard, HalalNS_Preference_Keyboard, HalalSS_Preference_Keyboard, HalalNH_Preference_Keyboard, HalalNIE_Preference_Keyboard, No_Preference_Keyboard, No1_Preference_Keyboard, No2_Preference_Keyboard, No9_Preference_Keyboard, No11_Preference_Keyboard, No13_Preference_Keyboard, No14_Preference_Keyboard, No16_Preference_Keyboard, NoNH_Preference_Keyboard, NoNS_Preference_Keyboard, NoSS_Preference_Keyboard, NoNIE_Preference_Keyboard, Vegetarian_Preference_Keyboard, Food_Preference_Keyboard, Nearest_Canteen
 from telepot.namedtuple import ReplyKeyboardMarkup,KeyboardButton
 from distance_matrix_gmaps import GetAllDistance_Canteen
 
@@ -41,36 +41,19 @@ def on_chat_message(msg):
 
                 #=================sub branching for food preference ...======
                 elif '(H)' in msg['text'] :
-                        #================= canteen preferences.....==========
+                        #================= canteen preferences.....========== #Single options are singled out immediately
                         if 'Canteen 2' in msg['text']:
-                                #================= if type of food has been determined... =======
-                                if 'Malay' in msg['text']:
-                                        print('GIMME THE Malay FOOD REVIEW OH MY GOD')
-                                        bot.sendMessage(chat_id, 'Store(s) Available: \nAyam Penyet ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                                                                                        
-                                #================= if type of food not determined ===============
-                                else:
-                                        bot.sendMessage(chat_id, 'What food type?', reply_markup = Halal2_Preference_Keyboard())
-
+                                print('GIMME THE Malay FOOD REVIEW OH MY GOD')
+                                bot.sendMessage(chat_id, 'Store(s) Available: \nAyam Penyet ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
+                           
                         elif 'Canteen 14' in msg['text']:
-                                #================= if type of food has been determined... =======
-                                if 'Malay' in msg['text']:
-                                        print('GIMME THE Malay FOOD REVIEW OH MY GOD')
-                                        bot.sendMessage(chat_id, 'Store(s) Available: \nMuslim Malay ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                #================= if type of food not determined ===============
-                                else:
-                                        bot.sendMessage(chat_id, 'What food type?', reply_markup = Halal14_Preference_Keyboard())
-
+                                print('GIMME THE Malay FOOD REVIEW OH MY GOD')
+                                bot.sendMessage(chat_id, 'Store(s) Available: \nMuslim Malay ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
+                          
                         elif 'Canteen 16' in msg['text']:
-                                #================= if type of food has been determined... =======
-                                if 'Indian' in msg['text']:
-                                        print('GIMME THE Indian FOOD REVIEW OH MY GOD')
-                                        bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Food ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                                                                                        
-                                #================= if type of food not determined ===============
-                                else:
-                                        bot.sendMessage(chat_id, 'What food type?', reply_markup = Halal16_Preference_Keyboard())
-
+                                print('GIMME THE Indian FOOD REVIEW OH MY GOD')
+                                bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Food ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
+        
                         elif 'North Hill Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Chinese' in msg['text']:
@@ -166,7 +149,7 @@ def on_chat_message(msg):
                                                                                                         
 			#================== if canteen preference not determined ==================
                         else:
-                                print("I'm a fuckin Vegetarian")
+                                print("I'm a Vegetarian")
                                 bot.sendMessage(chat_id, 'Which canteen?', reply_markup = Vegetarian_Preference_Keyboard())
 
                 #=================sub branching for food preference ...======
@@ -212,14 +195,9 @@ def on_chat_message(msg):
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = No2_Preference_Keyboard())
 
                         elif 'Canteen 4' in msg['text']:
-                                #================= if type of food has been determined... =======
-                                if 'Chinese' in msg['text']:
-                                        print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
-                                        bot.sendMessage(chat_id, 'Store(s) Available: \nZi Char / Fried Rice ⭐⭐⭐⭐⭐\nLa Mian ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                                                                                        
-                                #================= if type of food not determined ===============
-                                else:
-                                        bot.sendMessage(chat_id, 'What food type?', reply_markup = No4_Preference_Keyboard())
+                               print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
+                               bot.sendMessage(chat_id, 'Store(s) Available: \nZi Char / Fried Rice ⭐⭐⭐⭐⭐\nLa Mian ⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
+                
 
                         elif 'Canteen 9' in msg['text']:
                                 #================= if type of food has been determined... =======
