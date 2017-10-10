@@ -1,1 +1,1 @@
-worker: python ntufoodbot/foodbot.py
+worker: python foodbot.py
