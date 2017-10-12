@@ -155,24 +155,8 @@ def on_chat_message(msg):
                 #=================sub branching for food preference ...======
                 elif '(N)' in msg['text'] :
                         #================= canteen preferences.....==========
-                        if 'Canteen 1' in msg['text']:
-                                #================= if type of food has been determined... =======
-                                if 'Japanese' in msg['text']:
-                                        print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
-                                        bot.sendMessage(chat_id, 'Store(s) Available: \nMenya Takashi ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                                                                                        
-                                elif 'Chinese' in msg['text']:
-                                        print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
-                                        bot.sendMessage(chat_id, 'Store(s) Available: \nMala Talk ⭐⭐⭐\nHandmade Noodle ⭐⭐\nBraised Rice And Noodle ⭐⭐⭐\nChinese Cuisine ⭐⭐⭐⭐\nEconomical Rice ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                elif 'Western' in msg['text']:
-                                        print('GIMME THE Western FOOD REVIEW OH MY GOD')
-                                        bot.sendMessage(chat_id, 'Store(s) Available: \nWestern Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                                                                                        
-                                #================= if type of food not determined ===============
-                                else:
-                                        bot.sendMessage(chat_id, 'What food type?', reply_markup = No1_Preference_Keyboard())
 
-                        elif 'Canteen 2' in msg['text']:
+                        if 'Canteen 2' in msg['text']:
                                 #================= if type of food has been determined... =======
                                 if 'Korean' in msg['text']:
                                         print('GIMME THE Korean FOOD REVIEW OH MY GOD')
@@ -373,10 +357,28 @@ def on_chat_message(msg):
                                 elif 'Indian' in msg['text']:
                                         print('GIMME THE Indian FOOD REVIEW OH MY GOD')
                                         bot.sendMessage(chat_id, 'Store(s) Available: \nIndian Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
-                                                                                                        
+                                        
                                 #================= if type of food not determined ===============
                                 else:
                                         bot.sendMessage(chat_id, 'What food type?', reply_markup = NoSS_Preference_Keyboard())
+                        elif 'Canteen 1' in msg['text']:
+                                #================= if type of food has been determined... =======
+                                if 'Japanese' in msg['text']:
+                                        print('GIMME THE Japanese FOOD REVIEW OH MY GOD')
+                                        bot.sendMessage(chat_id, 'Store(s) Available: \nMenya Takashi ⭐⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
+                                       
+                                elif 'Chinese' in msg['text']:
+                                        print('GIMME THE Chinese FOOD REVIEW OH MY GOD')
+                                        bot.sendMessage(chat_id, 'Store(s) Available: \nMala Talk ⭐⭐⭐\nHandmade Noodle ⭐⭐\nBraised Rice And Noodle ⭐⭐⭐\nChinese Cuisine ⭐⭐⭐⭐\nEconomical Rice ⭐⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
+                                elif 'Western' in msg['text']:
+                                        print('GIMME THE Western FOOD REVIEW OH MY GOD')
+                                        bot.sendMessage(chat_id, 'Store(s) Available: \nWestern Cuisine ⭐⭐⭐\nI hope I helped you!!!',reply_markup = Welcome_Keyboard())
+                                                                                                        
+                                #================= if type of food not determined ===============
+                                else:
+                                        bot.sendMessage(chat_id, 'What food type?', reply_markup = No1_Preference_Keyboard())
+                                                                                                       
+
 
                         elif 'NIE Canteen' in msg['text']:
                                 #================= if type of food has been determined... =======
@@ -424,7 +426,8 @@ def on_chat_message(msg):
                 
 
 TOKEN = '402707033:AAFbGsQBdQKN_0GMqNs-SqRco-nAda5iPfc'
-
+#alt tele bot for testing
+TOKEN0 = '335364902:AAGWWFbhsf5361-uxCPgn99LddI8HPbDVqA'
 bot = telepot.Bot(TOKEN)
 
 #let it auto receive msg
