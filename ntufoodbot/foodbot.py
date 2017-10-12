@@ -10,8 +10,8 @@ from distance_matrix_gmaps import GetAllDistance_Canteen
 
 # start message
 gmaps = googlemaps.Client(key='AIzaSyChyx38fw6qtO12-FC99wEyK3u9gcgcXj8')
-canfood = ['canteen 1', 'canteen 2', 'canteen 4', 'canteen 9', 'canteen 11', 'canteen 13', 'canteen 14', 'canteen 16',
-           'north hill canteen', 'north spine canteen', 'south spine canteen', 'nie canteen']
+canfood = ['Canteen 1', 'Canteen 2', 'Canteen 4', 'Canteen 9', 'Canteen 11', 'Canteen 13', 'Canteen 14', 'Canteen 16',
+           'North Hill Canteen', 'North Spine Canteen', 'South Spine Canteen', 'NIE Canteen']
 
 choose_first_button = 0
 choose_second_button = 1
@@ -36,12 +36,12 @@ class FoodBot(telepot.helper.ChatHandler):
         content_type, chat_type, chat_id = telepot.glance(msg)
         print(content_type, chat_type, chat_id)
 
+        # get available buttons for keyboard
+        food_pref = menu.keys()
+
         if content_type == 'text':
 
             msg_text = msg['text']
-
-            #get available buttons for keyboard
-            food_pref = menu.keys()
 
             #initial response when bot is started
             if (msg_text == '/start'):
@@ -86,7 +86,7 @@ class FoodBot(telepot.helper.ChatHandler):
                         #prepare keyboard and response to get user selection of canteen
                         menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
                             [KeyboardButton(text = canteens)] for canteens in which_canteen.keys()
-                        ])
+                        ] + [[KeyboardButton(text = 'Return to main menu')]])
 
                         menu_response = 'Which canteen?'
 
@@ -102,145 +102,191 @@ class FoodBot(telepot.helper.ChatHandler):
                         # prepare keyboard and response to get user selection of canteen
                         menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
                             [KeyboardButton(text=canteens)] for canteens in which_canteen.keys()
-                        ])
+                        ] + [[KeyboardButton(text = 'Return to main menu')]])
 
                         menu_response = 'Which canteen?'
 
                         # move to next state
                         self.state = review_stall_button
 
-                    #when user wants to find nearest canteen, use Google Maps API to get details to get there
-                    else:
-                        x = msg['location']['latitude']
-                        y = msg['location']['longitude']
-                        origins = [[x, y]]
-                        print(origins)  # print current loc for checking
-                        destinations = [[1.346628, 103.686028], [1.348363, 103.685482], [1.344189, 103.685439],
-                                        [1.352270, 103.685298],
-                                        [1.354908, 103.686477], [1.351721, 103.681082], [1.352692, 103.682108],
-                                        [1.350299, 103.680914],
-                                        [1.354395, 103.688173], [1.347029, 103.680254], [1.342459, 103.682427],
-                                        [1.348746, 103.677614]]
-                        n = Nearest_Canteen(x, y)
-                        print(n)  # know what to draw from string
-                        listz = (GetAllDistance_Canteen(origins, destinations))
-                        print(listz)  # print whole list for checking
-                        distance_timetowalk = listz[n]
-                        print(distance_timetowalk[0])
-                        menu_response = ('The nearest food location is ' + canfood[n] + '.\nIt is approximately ' + distance_timetowalk[0]
-                                         + ' away\nWhich is about ' + distance_timetowalk[1] + ' if you walk. \nPlease choose your food preference')
-
-                        # move to second state for user to choose options
-                        self.state = choose_second_button
-
                 #for user to choose what food type they prefer
                 elif (self.state == choose_third_button):
 
-                    # update context canteen for later re-use
-                    self.can = msg_text
+                    if msg_text != 'Return to main menu':
 
-                    # load list of food types for the chosen canteen
-                    what_food_type = menu[self.pref][self.can]
+                        # update context canteen for later re-use
+                        self.can = msg_text
 
-                    # prepare keyboard and response to get user selection of food type
-                    menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
-                        [KeyboardButton(text=stalls)] for stalls in what_food_type.keys()
-                    ])
+                        # load list of food types for the chosen canteen
+                        what_food_type = menu[self.pref][self.can]
 
-                    menu_response = 'What food type?'
+                        # prepare keyboard and response to get user selection of food type
+                        menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
+                            [KeyboardButton(text=stalls)] for stalls in what_food_type.keys()
+                        ] + [[KeyboardButton(text = 'Return to main menu')]])
 
-                    #move to next state
-                    self.state = list_stalls
+                        menu_response = 'What food type?'
+
+                        # move to next state
+                        self.state = list_stalls
+
+                    else:
+
+                        menu_response = 'What can I do for you?'
+
+                        self.state = choose_second_button
 
                 #return list of stalls for the chosen food type
                 elif (self.state == list_stalls):
 
-                    # update context food type for later re-use
-                    self.type = msg_text
+                    if msg_text != 'Return to main menu':
 
-                    # load list of stalls for the chosen food type
-                    menu_response = menu[self.pref][self.can][self.type]
+                        # update context food type for later re-use
+                        self.type = msg_text
 
-                    # move to second state for user to choose options
-                    self.state = choose_second_button
+                        # load list of stalls for the chosen food type
+                        menu_response = menu[self.pref][self.can][self.type]
 
-                    bot.sendMessage(chat_id, menu_response, reply_markup=menu_keyboard)
-                    bot.sendMessage(chat_id, 'What can I do for you?')# added this line to get user to choose options again if required
-                    return
+                        # move to second state for user to choose options
+                        self.state = choose_second_button
+
+                        bot.sendMessage(chat_id, menu_response, reply_markup=menu_keyboard)
+                        bot.sendMessage(chat_id, 'What can I do for you?')  # added this line to get user to choose options again if required
+                        return
+
+                    else:
+
+                        menu_response = 'What can I do for you?'
+
+                        self.state = choose_second_button
 
                 #for user to choose stall
                 elif (self.state == review_stall_button):
 
-                    # update context canteen for later re-use
-                    self.can = msg_text
+                    if msg_text != 'Return to main menu':
 
-                    # load list of stalls for the chosen canteen
-                    which_stall = menu['Give my Review'][self.can]
+                        # update context canteen for later re-use
+                        self.can = msg_text
 
-                    # prepare keyboard and response to get user selection of stall
-                    menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
-                        [KeyboardButton(text=stalls)] for stalls in which_stall.keys()
-                    ])
+                        # load list of stalls for the chosen canteen
+                        which_stall = menu['Give my Review'][self.can]
 
-                    menu_response = 'Which stall?'
+                        # prepare keyboard and response to get user selection of stall
+                        menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
+                            [KeyboardButton(text=stalls)] for stalls in which_stall.keys()
+                        ] + [[KeyboardButton(text = 'Return to main menu')]])
 
-                    # move to next state
-                    self.state = review_give_ratings
+                        menu_response = 'Which stall?'
+
+                        # move to next state
+                        self.state = review_give_ratings
+
+                    else:
+
+                        menu_response = 'What can I do for you?'
+
+                        self.state = choose_second_button
 
                 #for user to enter rating for stall
                 elif (self.state == review_give_ratings):
 
-                    # update context stall for later re-use
-                    self.stall = msg_text
+                    if msg_text != 'Return to main menu':
 
-                    # prepare keyboard and response to get user rating of stall from 1 to 5
-                    menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
-                        [KeyboardButton(text=rating)] for rating in range(1,6)
-                    ])
+                        # update context stall for later re-use
+                        self.stall = msg_text
 
-                    menu_response = 'Please choose your rating for the stall.'
+                        # prepare keyboard and response to get user rating of stall from 1 to 5
+                        menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
+                            [KeyboardButton(text=rating)] for rating in range(1, 6)
+                        ] + [[KeyboardButton(text = 'Return to main menu')]])
 
-                    # move to next state
-                    self.state = review_get_rating
+                        menu_response = 'Please choose your rating for the stall.'
+
+                        # move to next state
+                        self.state = review_get_rating
+
+                    else:
+
+                        menu_response = 'What can I do for you?'
+
+                        self.state = choose_second_button
 
                 #for updating user rating to the rating database
                 elif (self.state == review_get_rating):
 
-                    # update context rating for later re-use
-                    self.rating = msg_text
+                    if msg_text != 'Return to main menu':
 
-                    # obtain the position of the stall in the ratings lists from the dictionary
-                    list_pos = menu['Give my Review'][self.can][self.stall]
+                        # update context rating for later re-use
+                        self.rating = msg_text
 
-                    # update numerator with addition of user rating
-                    rating_num[list_pos] = rating_num[list_pos] + int(self.rating)
+                        # obtain the position of the stall in the ratings lists from the dictionary
+                        list_pos = menu['Give my Review'][self.can][self.stall]
 
-                    # update denominator with addition of user rating
-                    rating_div[list_pos] += 1
+                        # update numerator with addition of user rating
+                        rating_num[list_pos] = rating_num[list_pos] + int(self.rating)
 
-                    # obtain new average rating
-                    before_rounding = rating_num[list_pos] / rating_div[list_pos]
+                        # update denominator with addition of user rating
+                        rating_div[list_pos] += 1
 
-                    # round up value of average rating as accuracy required is only 1 decimal place, so round function is adequate
-                    rating_avg[list_pos] = round(before_rounding,2)
+                        # obtain new average rating
+                        before_rounding = rating_num[list_pos] / rating_div[list_pos]
 
-                    # thank user for their rating
-                    menu_response = 'Thank you for your review!'
+                        # round up value of average rating as accuracy required is only 1 decimal place, so round function is adequate
+                        rating_avg[list_pos] = round(before_rounding, 2)
 
-                    # move to second state for user to choose options
-                    self.state = choose_second_button
+                        # thank user for their rating
+                        menu_response = 'Thank you for your review!'
 
-                    bot.sendMessage(chat_id, menu_response, reply_markup=menu_keyboard)
-                    bot.sendMessage(chat_id, 'What can I do for you?')# added this line to get user to choose options again if required
-                    return
+                        # move to second state for user to choose options
+                        self.state = choose_second_button
+
+                        bot.sendMessage(chat_id, menu_response, reply_markup=menu_keyboard)
+                        bot.sendMessage(chat_id,
+                                        'What can I do for you?')  # added this line to get user to choose options again if required
+                        return
+
+                    else:
+
+                        menu_response = 'What can I do for you?'
+
+                        self.state = choose_second_button
 
                 bot.sendMessage(chat_id, menu_response, reply_markup=menu_keyboard)
                 return
 
+        # when user wants to find nearest canteen, use Google Maps API to get details to get there
+        elif content_type == 'location':
+            x = msg['location']['latitude']
+            y = msg['location']['longitude']
+            origins = [[x, y]]
+            print(origins)  # print current loc for checking
+            destinations = [[1.346628, 103.686028], [1.348363, 103.685482], [1.344189, 103.685439],
+                            [1.352270, 103.685298],
+                            [1.354908, 103.686477], [1.351721, 103.681082], [1.352692, 103.682108],
+                            [1.350299, 103.680914],
+                            [1.354395, 103.688173], [1.347029, 103.680254], [1.342459, 103.682427],
+                            [1.348746, 103.677614]]
+            n = Nearest_Canteen(x, y)
+            print(n)  # know what to draw from string
+            listz = (GetAllDistance_Canteen(origins, destinations))
+            print(listz)  # print whole list for checking
+            distance_timetowalk = listz[n]
+            print(distance_timetowalk[0])
+            menu_response = ('The nearest food location is ' + canfood[n] + '.\nIt is approximately ' + distance_timetowalk[0]
+                + ' away\nWhich is about ' + distance_timetowalk[1] + ' if you walk.')
+            menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
+                            [KeyboardButton(text=pref)] for pref in food_pref
+                            ] + [[KeyboardButton(text='Find Nearest Canteen', request_location=True)]])
+
+            bot.sendMessage(chat_id, menu_response, reply_markup=menu_keyboard)
+            bot.sendMessage(chat_id, 'What can I do for you?')  # added this line to get user to choose options again if required
+
+            # move to second state for user to choose options
+            self.state = choose_second_button
 
 TOKEN = '402707033:AAFbGsQBdQKN_0GMqNs-SqRco-nAda5iPfc'
 
-bot = DelegatorBot(TOKEN, [
+bot = DelegatorBot('461179200:AAEZqSEiFVEs3zG1_ZUSxePaeNmuvH_SRZc', [
     pave_event_space()
     (per_chat_id(), create_open, FoodBot, timeout=100)
 ])
