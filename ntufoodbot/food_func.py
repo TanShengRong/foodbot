@@ -11,54 +11,34 @@ TOKEN = '402707033:AAFbGsQBdQKN_0GMqNs-SqRco-nAda5iPfc'
 
 bot = telepot.Bot(TOKEN)
 
-[[1.346628,103.686028], [1.348363, 103.685482],[1.344189, 103.685439],
- [1.352270, 103.685298], [1.354908, 103.686477], [1.351721, 103.681082],
- [1.352692, 103.682108], [1.350299, 103.680914], [1.354395, 103.688173],
- [1.347029, 103.680254], [1.342459, 103.682427], [1.348746, 103.677614]]
-#============= calculation of the nearest canteen ===============
+#list of latitudes of canteens
+lat_list = [1.346628, 1.348363, 1.344189, 1.352270, 1.354908,
+            1.351721, 1.352692, 1.350299, 1.354395, 1.347029,
+            1.342459, 1.348746]
+
+#list of longitudes of canteens
+long_list = [103.686028, 103.685482, 103.685439, 103.685298, 103.686477,
+             103.681082, 103.682108, 103.680914, 103.688173, 103.680254,
+             103.682427, 103.677614]
+
+
+# ============= calculation of the nearest canteen ===============
 # by comparing the distance between current location and different canteens
 # function parameter: coordinate of current location
-# function return: index of the nearest canteen, list mz be written in foodbot.
-def Nearest_Canteen(x,y):
-    dis=99999999
-    n=0
-    if (pow(x-1.346628,2)+pow(y-103.686028,2) < dis):#can 1
-        dis = pow(x-1.346628,2)+pow(y-103.686028,2)
-        n=0   	
-    if (pow(x-1.348363,2)+pow(y-103.685547,2) < dis):#can 2
-        dis = pow(x-1.348363,2)+pow(y-103.685547,2) 
-        n=1
-    if (pow(x-1.344189,2)+pow(y-103.685439,2) < dis):#can 4
-        dis = pow(x-1.344189,2)+pow(y-103.685439,2)
-        n=2
-    if (pow(x-1.352270,2)+pow(y-103.685298,2) < dis):#can 9
-        dis = pow(x-1.352270,2)+pow(y-103.685298,2)
-        n=3
-    if (pow(x-1.354908,2)+pow(y-103.686477,2) < dis):#can 11
-        dis = pow(x-1.354908,2)+pow(y-103.686477,2)
-        n=4
-    if (pow(x-1.351721,2)+pow(y-103.681082,2) < dis):#can 13
-        dis = pow(x-1.351721,2)+pow(y-103.681082,2)
-        n=5
-    if (pow(x-1.352692,2)+pow(y-103.682108,2) < dis):#can 14
-        dis = pow(x-1.352692,2)+pow(y-103.682108,2)
-        n=6
-    if (pow(x-1.350299,2)+pow(y-103.680914,2) < dis):#can 16
-        dis = pow(x-1.350299,2)+pow(y-103.680914,2)
-        n=7
-    if (pow(x-1.354395,2)+pow(y-103.688173,2) < dis):#north hill canteen
-        dis = pow(x-1.354395,2)+pow(y-103.688173,2)
-        n=8        
-    if (pow(x-1.347029,2)+pow(y-103.680254,2) < dis):#north spine canteen
-        dis = pow(x-1.347029,2)+pow(y-103.680254,2)
-        n=9        
-    if (pow(x-1.342459,2)+pow(y-103.682427,2) < dis):#south spine canteen koufu
-        dis = pow(x-1.342459,2)+pow(y-103.682427,2)
-        n=10        
-    if (pow(x-1.348746,2)+pow(y-103.677614,2) < dis):#nie canteen
-        dis = pow(x-1.348746,2)+pow(y-103.677614,2)
-        n=11
-        
+# function return: index(n) of the nearest canteen, list mz be written in foodbot.
+#lat & long are the positions of the latitudes and longtudes of the canteens in the lists
+def Nearest_Canteen(x, y):
+    dis = 99999999
+    n = 0
+    lat = 0
+    long = 0
+
+    while lat < 12:
+        if (pow(x - lat_list[lat], 2) + pow(y - long_list[long], 2) < dis):  # can 1
+            dis = pow(x - lat_list[lat], 2) + pow(y - long_list[long], 2)
+            n = lat
+        lat = lat + 1
+        long = long + 1
     return n
 
 
