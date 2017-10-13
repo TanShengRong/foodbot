@@ -33,9 +33,9 @@ The bot requires Telegram versions released after 9 April, 2016. Telegram Web an
 
 ## Contributing
 
-* XIN QING
-* IAN LIEW
-* LEONARD
+* CAI XIN QING
+* IAN TAN YI
+* LEONARD WANG GUAN ZHI
 
 ## Acknowledgments
 

@@ -8,7 +8,6 @@ from food_func import menu, Nearest_Canteen, rating_num, rating_div, rating_avg
 from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
 from distance_matrix_gmaps import GetAllDistance_Canteen
 
-# start message
 gmaps = googlemaps.Client(key='AIzaSyChyx38fw6qtO12-FC99wEyK3u9gcgcXj8')
 canfood = ['Canteen 1', 'Canteen 2', 'Canteen 4', 'Canteen 9', 'Canteen 11', 'Canteen 13', 'Canteen 14', 'Canteen 16',
            'North Hill Canteen', 'North Spine Canteen', 'South Spine Canteen', 'NIE Canteen']
@@ -44,20 +43,18 @@ class FoodBot(telepot.helper.ChatHandler):
         if content_type == 'location':
             x = msg['location']['latitude']
             y = msg['location']['longitude']
+            #parse location from telegram and change into gmaps format
             origins = [[x, y]]
-            print(origins)  # print current loc for checking
             destinations = [[1.346628, 103.686028], [1.348363, 103.685482], [1.344189, 103.685439],
                             [1.352270, 103.685298],
                             [1.354908, 103.686477], [1.351721, 103.681082], [1.352692, 103.682108],
                             [1.350299, 103.680914],
                             [1.354395, 103.688173], [1.347029, 103.680254], [1.342459, 103.682427],
                             [1.348746, 103.677614]]
+            # nearest canteen determined
             n = Nearest_Canteen(x, y)
-            print(n)  # know what to draw from string
             listz = (GetAllDistance_Canteen(origins, destinations))
-            print(listz)  # print whole list for checking
-            distance_timetowalk = listz[n]
-            print(distance_timetowalk[0])
+            distance_timetowalk = listz[n] # extract time and duration for the nearest canteen
             menu_response = ('The nearest food location is ' + canfood[n] + '.\nIt is approximately ' + distance_timetowalk[0]
                 + ' away\nWhich is about ' + distance_timetowalk[1] + ' if you walk.')
             menu_keyboard = ReplyKeyboardMarkup(one_time_keyboard=True, keyboard=[
@@ -291,8 +288,7 @@ class FoodBot(telepot.helper.ChatHandler):
                     bot.sendMessage(chat_id, menu_response, reply_markup=menu_keyboard)
                     return
                 
-            except:# if user use their normal keyboard 
-                 print(self.state)
+            except:# edge case, if user use their normal keyboard instead of custom keyboards
                  bot.sendMessage(chat_id, 'Error, please use the keyboard provided!')
                 
 
