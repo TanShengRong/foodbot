@@ -77,149 +77,123 @@ def Nearest_Canteen(x, y):
 menu = {
     'Halal Preference': {
         'Canteen 2': {
-            'Halal': ('Store(s) Available: \nAyam Penyet ' + str(rating_avg[16]) + '⭐\nI hope I helped you!!!')
+            'Halal': ('Store(s) Available: \nAyam Penyet\nI hope I helped you!!!')
         },
         'Canteen 14': {
-            'Halal': ('Store(s) Available: \nMuslim Malay ' + str(rating_avg[39]) + '⭐\nI hope I helped you!!!')
+            'Halal': ('Store(s) Available: \nMuslim Malay\nI hope I helped you!!!')
         },
         'Canteen 16': {
-            'Halal': ('Store(s) Available: \nIndian Food ' + str(rating_avg[45]) + '⭐\nI hope I helped you!!!')
+            'Halal': ('Store(s) Available: \nIndian Food\nI hope I helped you!!!')
         },
         'North Hill Canteen': {
-            'Chinese': ('Store(s) Available: \nChicken Rice ' + str(rating_avg[49]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nNasi Padang And Indian Cuisine ' + str(rating_avg[53]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nNasi Padang And Indian Cuisine ' + str(rating_avg[53]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nChicken Rice\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nNasi Padang And Indian Cuisine\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nNasi Padang And Indian Cuisine\nI hope I helped you!!!')
         },
         'North Spine Canteen': {
-            'Chinese': ('Store(s) Available: \nVegetarian Food ' + str(rating_avg[62]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nMalay BBQ ' + str(rating_avg[68]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian Cuisine ' + str(rating_avg[69]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nVegetarian Food\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nMalay BBQ\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian Cuisine\nI hope I helped you!!!')
         },
         'South Spine Canteen': {
-            'Chinese': ('Store(s) Available: \nBan Mian Fish Soup ' + str(rating_avg[77]) + '⭐\nYong Tau Foo '
-                        + str(rating_avg[78]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nNasi Padang ' + str(rating_avg[82]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian Cuisine ' + str(rating_avg[83]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nBan Mian Fish Soup\nYong Tau Foo\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nNasi Padang\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian Cuisine\nI hope I helped you!!!')
         },
         'NIE Canteen': {
-            'Chinese': ('Store(s) Available: \nVegetarian ' + str(rating_avg[84]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nWestern Food ' + str(rating_avg[91]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nNasi Padang ' + str(rating_avg[92]) + '⭐\nMuslim Food ' + str(rating_avg[93]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nVegetarian\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nWestern Food\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nNasi Padang\nMuslim Food\nI hope I helped you!!!')
         }
     },
     'Vegetarian Preference': {
         'North Spine Canteen': {
-            'Vegetarian': ('Store(s) Available: \nVegetarian Food ' + str(rating_avg[62]) + '⭐\nI hope I helped you!!!')
+            'Vegetarian': ('Store(s) Available: \nVegetarian Food\nI hope I helped you!!!')
         },
         'South Spine Canteen': {
-            'Vegetarian': ('Stall(s) Available:\nVegetarian ' + str(rating_avg[73]) + '⭐\nI hope I helped you!!!')
+            'Vegetarian': ('Stall(s) Available:\nVegetarian\nI hope I helped you!!!')
         },
         'NIE Canteen': {
-            'Vegetarian': ('Store(s) Available: \nVegetarian ' + str(rating_avg[84]) + '⭐\nI hope I helped you!!!')
+            'Vegetarian': ('Store(s) Available: \nVegetarian\nI hope I helped you!!!')
         }
 
     },
     'No Preference': {
         'Canteen 1': {
-            'Japanese': ('Store(s) Available: \nMenya Takashi ' + str(rating_avg[0]) + '⭐\nI hope I helped you!!!'),
-            'Chinese': ('Store(s) Available: \nMala Talk ' + str(rating_avg[1]) + '⭐\nHandmade Noodle ' + str(rating_avg[2]) +
-                        '⭐\nBraised Rice And Noodle ' + str(rating_avg[3]) + '⭐\nChinese Cuisine ' + str(rating_avg[4]) +
-                        '⭐\nEconomical Rice ' + str(rating_avg[5]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nWestern Cuisine ' + str(rating_avg[6]) + '⭐\nI hope I helped you!!!')
+            'Japanese': ('Store(s) Available: \nMenya Takashi\nI hope I helped you!!!'),
+            'Chinese': ('Store(s) Available: \nMala Talk\nHandmade Noodle\nBraised Rice And Noodle\nChinese Cuisine\nEconomical Rice\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nWestern Cuisine\nI hope I helped you!!!')
         },
         'Canteen 2': {
-            'Korean': ('Store(s) Available: \nKorean Cuisine ' + str(rating_avg[7]) + '⭐\nI hope I helped you!!!'),
-            'Chinese': ('Store(s) Available: \nChicken Rice ' + str(rating_avg[8]) + '⭐\nXiao Long Bao ' + str(rating_avg[9]) +
-                        '⭐\nYong Tau Foo ' + str(rating_avg[10]) + '⭐\nSichuan Cuisine ' + str(rating_avg[11]) +
-                        '⭐\nShandong Big Bao ' + str(rating_avg[12]) + '⭐\nEconomical Rice ' + str(rating_avg[13]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nKath’s Bakery ' + str(rating_avg[14]) + '⭐\nThe Oven ' + str(rating_avg[15]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nAyam Penyet ' + str(rating_avg[16]) + '⭐\nI hope I helped you!!!')
+            'Korean': ('Store(s) Available: \nKorean Cuisine\nI hope I helped you!!!'),
+            'Chinese': ('Store(s) Available: \nChicken Rice\nXiao Long Bao\nYong Tau Foo\nSichuan Cuisine\nShandong Big Bao\
+            \nEconomical Rice\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nKath’s Bakery\nThe Oven\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nAyam Penyet\nI hope I helped you!!!')
         },
         'Canteen 4': {
-            'Chinese': ('Store(s) Available: \nZi Char / Fried Rice ' + str(rating_avg[17]) + '⭐\nLa Mian '
-                        + str(rating_avg[18]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nZi Char / Fried Rice\nLa Mian\nI hope I helped you!!!')
         },
         'Canteen 9': {
-            'Chinese': ('Store(s) Available: \nJiu Li Xiang Chuan Cai ' + str(rating_avg[19]) + '⭐\nChinese Cuisine '
-                         + str(rating_avg[20]) + '⭐\nXian Noodles ' + str(rating_avg[21]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nWestern ' + str(rating_avg[22]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian ' + str(rating_avg[23]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nJiu Li Xiang Chuan Cai\nChinese Cuisine\nXian Noodles\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nWestern\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian\nI hope I helped you!!!')
         },
         'Canteen 11': {
-            'Korean': ('Store(s) Available: \nKorean Food ' + str(rating_avg[24]) + '⭐\nI hope I helped you!!!'),
-            'Japanese': ('Store(s) Available: \n7 Fukijin Japanese Food ' + str(rating_avg[25]) + '⭐\nI hope I helped you!!!'),
-            'Chinese': ('Store(s) Available: \nMixed Veg Rice ' + str(rating_avg[26]) + '⭐\nSi Chuan Mei Shi '
-                        + str(rating_avg[27]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nWaffles & Pastries ' + str(rating_avg[28]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian Food ' + str(rating_avg[29]) + '⭐\nI hope I helped you!!!')
+            'Korean': ('Store(s) Available: \nKorean Food\nI hope I helped you!!!'),
+            'Japanese': ('Store(s) Available: \n7 Fukijin Japanese Food\nI hope I helped you!!!'),
+            'Chinese': ('Store(s) Available: \nMixed Veg Rice\nSi Chuan Mei Shi\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nWaffles & Pastries\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian Food\nI hope I helped you!!!')
         },
         'Canteen 13': {
-            'Korean': ('Store(s) Available: \nKorean Cuisine ' + str(rating_avg[30]) + '⭐\nI hope I helped you!!!'),
-            'Japanese': ('Store(s) Available: \nJapanese Cuisine ' + str(rating_avg[31]) + '⭐\nI hope I helped you!!!'),
-            'Chinese': ('Store(s) Available: \nNoodle Delight ' + str(rating_avg[32]) + '⭐\nChinese Cuisine '
-                        + str(rating_avg[33]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nWestern Food ' + str(rating_avg[34]) + '⭐\nI hope I helped you!!!')
+            'Korean': ('Store(s) Available: \nKorean Cuisine\nI hope I helped you!!!'),
+            'Japanese': ('Store(s) Available: \nJapanese Cuisine\nI hope I helped you!!!'),
+            'Chinese': ('Store(s) Available: \nNoodle Delight\nChinese Cuisine\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nWestern Food\nI hope I helped you!!!')
         },
         'Canteen 14': {
-            'Chinese': ('Store(s) Available: \nTaiwan ' + str(rating_avg[35]) + '⭐\nSi Chuan ' + str(rating_avg[36])
-                        + '⭐\nAsian Food Delights ' + str(rating_avg[37]) + '⭐\nBan Mian-Fish Soup ' + str(rating_avg[38])
-                        + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nMuslim Malay ' + str(rating_avg[39]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nTaiwan\nSi Chuan\nAsian Food Delights\nBan Mian-Fish Soup\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nMuslim Malay\nI hope I helped you!!!')
         },
         'Canteen 16': {
-            'Japanese': ('Store(s) Available: \nJapanese Food ' + str(rating_avg[40]) + '⭐\nI hope I helped you!!!'),
-            'Chinese': ('Store(s) Available: \nChinese Ramen ' + str(rating_avg[41]) + '⭐\nSignature Dishes With Rice '
-                        + str(rating_avg[42]) + '⭐\nMala Hot Pot ' + str(rating_avg[43]) + '⭐\nEconomical Rice '
-                        + str(rating_avg[44]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian Food ' + str(rating_avg[45]) + '⭐\nI hope I helped you!!!')
+            'Japanese': ('Store(s) Available: \nJapanese Food\nI hope I helped you!!!'),
+            'Chinese': ('Store(s) Available: \nChinese Ramen\nSignature Dishes With Rice\nMala Hot Pot\nEconomical Rice\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian Food\nI hope I helped you!!!')
         },
         'North Hill Canteen': {
-            'Chinese': ('Store(s) Available: \nMixed Veg Rice ' + str(rating_avg[46]) + '⭐\nTraditional Dough Fritters And Miniwok '
-                        + str(rating_avg[47]) + '⭐\nTraditional Handmade Fish Ball Noodle ' + str(rating_avg[48])
-                        + '⭐\nChicken Rice ' + str(rating_avg[49]) + '⭐\nAh Boon’s Fish Soup ' + str(rating_avg[50])
-                        + '⭐\nClaypot & Porridge ' + str(rating_avg[51]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nWestern Cuisine ' + str(rating_avg[52]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nNasi Padang And Indian Cuisine ' + str(rating_avg[53]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nNasi Padang And Indian Cuisine ' + str(rating_avg[53]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nMixed Veg Rice\nTraditional Dough Fritters And Miniwok\nTraditional Handmade Fish Ball Noodle\
+            \nChicken Rice\nAh Boon’s Fish Soup\nClaypot & Porridge\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nWestern Cuisine\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nNasi Padang And Indian Cuisine\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nNasi Padang And Indian Cuisine\nI hope I helped you!!!')
         },
         'North Spine Canteen': {
-            'Korean': ('Store(s) Available: \nJapanese Korean Delight ' + str(rating_avg[54]) + '⭐\nI hope I helped you!!!'),
-            'Japanese': ('Store(s) Available: \nJapanese Korean Delight ' + str(rating_avg[54]) + '⭐\nI hope I helped you!!!'),
-            'Chinese': ('Store(s) Available: \nMini Wok ' + str(rating_avg[55]) + '⭐\nYong Tau Foo ' + str(rating_avg[56])
-                        + '⭐\nChicken Rice ' + str(rating_avg[57]) + '⭐\nHand-Made Noodles ' + str(rating_avg[58])
-                        + '⭐\nMixed Rice ' + str(rating_avg[59]) + '⭐\nCantonese Roast Duck ' + str(rating_avg[60])
-                        + '⭐\nSoup Delight ' + str(rating_avg[61]) + '⭐\nVegetarian Food ' + str(rating_avg[62])
-                        + '⭐\nTaiwanese Cuisine ' + str(rating_avg[63]) + '⭐\nXian Cuisine ' + str(rating_avg[64]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nWestern Food ' + str(rating_avg[65]) + '⭐\nBBQ Delight ' + str(rating_avg[66])
-                        + '⭐\nItalian Pasta ' + str(rating_avg[67]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nMalay BBQ ' + str(rating_avg[68]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian Cuisine ' + str(rating_avg[69]) + '⭐\nI hope I helped you!!!'),
-            'Vietnamese': ('Store(s) Available: \nVietnamese Cuisine ' + str(rating_avg[70]) + '⭐\nI hope I helped you!!!')
+            'Korean': ('Store(s) Available: \nJapanese Korean Delight\nI hope I helped you!!!'),
+            'Japanese': ('Store(s) Available: \nJapanese Korean Delight\nI hope I helped you!!!'),
+            'Chinese': ('Store(s) Available: \nMini Wok\nYong Tau Foo\nChicken Rice\nHand-Made Noodles\nMixed Rice\
+            \nCantonese Roast Duck\nSoup Delight\nVegetarian Food\nTaiwanese Cuisine\nXian Cuisine\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nWestern Food\nBBQ Delight\nItalian Pasta\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nMalay BBQ\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian Cuisine\nI hope I helped you!!!'),
+            'Vietnamese': ('Store(s) Available: \nVietnamese Cuisine\nI hope I helped you!!!')
         },
         'South Spine Canteen': {
-            'Japanese': ('Store(s) Available: \nJapanese Cuisine ' + str(rating_avg[71]) + '⭐\nSalad And Bento Express '
-                         + str(rating_avg[72]) + '⭐\nI hope I helped you!!!'),
-            'Chinese': ('Store(s) Available: \nVegetarian ' + str(rating_avg[73]) + '⭐\nMixed Veg Rice ' + str(rating_avg[74])
-                        + '⭐\nDim Sum ' + str(rating_avg[75]) + '⭐\nChinese Cuisine ' + str(rating_avg[76])
-                        + '⭐\nBan Mian Fish Soup ' + str(rating_avg[77]) + '⭐\nYong Tau Foo ' + str(rating_avg[78])
-                        + '⭐\nChicken Rice ' + str(rating_avg[79]) + '⭐\nKoka Mee Express ' + str(rating_avg[80]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nPasta Express ' + str(rating_avg[81]) + '⭐\nSalad And Bento Express '
-                        + str(rating_avg[72]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nNasi Padang ' + str(rating_avg[82]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian Cuisine ' + str(rating_avg[83]) + '⭐\nI hope I helped you!!!')
+            'Japanese': ('Store(s) Available: \nJapanese Cuisine\nSalad And Bento Express\nI hope I helped you!!!'),
+            'Chinese': ('Store(s) Available: \nVegetarian\nMixed Veg Rice\nDim Sum\nChinese Cuisine\nBan Mian Fish Soup\
+            \nYong Tau Foo\nChicken Rice\nKoka Mee Express\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nPasta Express\nSalad And Bento Express\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nNasi Padang\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian Cuisine\nI hope I helped you!!!')
         },
         'NIE Canteen': {
-            'Chinese': ('Store(s) Available: \nVegetarian ' + str(rating_avg[84]) + '⭐\nChicken Rice ' + str(rating_avg[85])
-                        + '⭐\nBan Mian & Fish Soup ' + str(rating_avg[86]) + '⭐\nNoodle ' + str(rating_avg[87]) + '⭐\nA-La-Carte '
-                        + str(rating_avg[88]) + '⭐\nChinese Food ' + str(rating_avg[89]) + '⭐\nI hope I helped you!!!'),
-            'Western': ('Store(s) Available: \nSandwiches & Salad Bar ' + str(rating_avg[90])
-                        + '⭐\nWestern Food ' + str(rating_avg[91]) + '⭐\nI hope I helped you!!!'),
-            'Malay': ('Store(s) Available: \nNasi Padang ' + str(rating_avg[92])
-                      + '⭐\nMuslim Food ' + str(rating_avg[93]) + '⭐\nI hope I helped you!!!'),
-            'Indian': ('Store(s) Available: \nIndian ' + str(rating_avg[94]) + '⭐\nI hope I helped you!!!')
+            'Chinese': ('Store(s) Available: \nVegetarian\nChicken Rice\nBan Mian & Fish Soup\nNoodle\nA-La-Carte\nChinese Food\nI hope I helped you!!!'),
+            'Western': ('Store(s) Available: \nSandwiches & Salad Bar\nWestern Food\nI hope I helped you!!!'),
+            'Malay': ('Store(s) Available: \nNasi Padang\nMuslim Food\nI hope I helped you!!!'),
+            'Indian': ('Store(s) Available: \nIndian\nI hope I helped you!!!')
         }
     },
-    'Give my Review': {
+    'Give/Check stall rating': {
         'Canteen 1': {
             'Menya Takashi': 0,
             'Mala Talk': 1,
