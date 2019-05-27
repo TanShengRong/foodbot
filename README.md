@@ -6,6 +6,8 @@ NTU Food Bot gives the location and distance from the best Makan places in the v
 
 The bot requires Telegram versions released after 9 April, 2016. Telegram Web and Desktop is not recommended as location grabbing is not supported.
 
+[Click here to start using the bot](https://t.me/ntufoooodbot)
+
 ### How to use ? 
 
 
@@ -24,8 +26,6 @@ The bot requires Telegram versions released after 9 April, 2016. Telegram Web an
 
 ```
 
-
-
 ## Built With
 
 * [telepot](https://github.com/nickoala/telepot) - py module that simplifies telegram bot coding 
@@ -39,45 +39,19 @@ The bot requires Telegram versions released after 9 April, 2016. Telegram Web an
 
 ## Acknowledgments
 
-* GITHUB
-* STACKOVERFLOW for everything that was not yet taught 
-
-
-## TODOS 
-
-Documentation
-
-1. Project Report (up to 10 pages, excludes cover page, table of contents).
-
-The Project report should include the following:
-
-a. Introduction - Background of the Project.
-
-b. Problem statement - What problem are you trying to solve. More importantly, why do we care?
-
-c. Proposed solution - Include a flowchart, and a description of the various functions.
-
-d. Constraints and Limitations - What you couldn't do, and what you would do if you had more time and money.
-
-e. Conclusion - Final remarks about the project, and what you want to take away from this project.
-
-
-2. Python script + Others.
-
-Have a readme.txt file to list down all the Python files as part of your project. Have a brief description of what each of the files do. You may include your SQL, Heroku scripts here too for evaluation.
-
-
+*  Professor Lua Rui Ping 
 
 ## Future TODOS.
 
-1. Setup, link database of reviews - user input
-                                   - yelp
++ Setup, link database of reviews 
+    - user input
+    - yelp
 
 
 ## Limitations
 
-restaurants not included
-reviews provided not based on a huge standard deviation
-google maps distance matrix not accurate at times - requests distance calculation for walking via pedestrian paths & sidewalk
++ restaurants not included
++ reviews provided not based on a huge standard deviation
++ google maps distance matrix not accurate at times - requests distance calculation for walking via pedestrian paths & sidewalk
 
 
